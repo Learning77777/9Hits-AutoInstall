@@ -457,7 +457,7 @@ cat > $settings <<EOFSS
     {"hiddenColumns":[],"token":"$token","browser":"hide","popups":"$pupups","adult":"$adultpages","coinMn":"$coinMn","autoStart":"yes"}
 EOFSS
 
-
+    mkdir /root/9Hits/9HitsViewer_x64/sessions
     cd /root/9Hits/9HitsViewer_x64/sessions/
     isproxy=system
     for i in `seq 1 $number`;
