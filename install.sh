@@ -2,7 +2,7 @@
 mkdir /root/9Hits/
 cd /root/9Hits/
 a=$((1 + RANDOM % 28))
-URL="https://www.dropbox.com/s/usku8rcyysk9664/9hits-linux-x64-2.5.2.tar.bz2"
+URL="https://www.dropbox.com/s/y10fgiygbtj1e9n/9hitsv3-linux64.tar.bz2"
 if [[ $EUID -ne 0 ]]; then
     whiptail --title "ERROR" --msgbox "This script must be run as root" 8 78
     exit
@@ -313,8 +313,9 @@ else
                     os=3
                     ;;
                 *)
-                    whiptail --title "ERROR" --msgbox "Sorry, for the moment this script does not support your Distro" 8 78
-                    exit
+                    #whiptail --title "ERROR" --msgbox "Sorry, for the moment this script does not support your Distro" 8 78
+                    #exit
+                    os=3
                     ;;
                 esac
                 token=$2
@@ -449,7 +450,7 @@ else
     fi
     wget -O 9hits-linux-x64.tar.bz2 $URL
     tar -xjvf 9hits-linux-x64.tar.bz2
-    mv /root/9Hits/9hits-linux-x64 /root/9Hits/9HitsViewer_x64
+    mv /root/9Hits/9hitsv3-linux64 /root/9Hits/9HitsViewer_x64
     cd /root/9Hits/9HitsViewer_x64/
     settings="/root/9Hits/9HitsViewer_x64/settings.json"
 cat > $settings <<EOFSS
